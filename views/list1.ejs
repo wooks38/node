@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  </head>
+  <body>
+	<div class="container">
+		<!-- <h4>기본 table</h4> -->
+		<table class="table">
+			<thead>
+				<tr>
+					<th>SITE_CODE</th>
+					<th>NAME</th>
+					<th>CONTACT</th>
+                    <th>Equipments</th>
+                    <th>Completion</th>
+                    <th>CONTROL</th>
+				</tr>
+			</thead>
+			<tbody>
+                <% data.forEach((item) => { %>
+				<tr>
+					<td><%= item.site_code %></td>
+					<td><%= item.name %></td>
+					<td><%= item.phone_number %></td>
+                    <td><%= item.equipments %></td>
+                    <td><%= item.completion_date %></td>
+                    <td><%= item.use_stop_control %></td>
+				</tr>
+                <% }); %>
+			</tbody>
+		</table>
+        <br>
+        <table class="table">
+			<thead>
+				<tr>
+					<th>DATE</th>
+					<th>EVENT</th>
+                    <th>EVENT TYPE</th> 
+				</tr>
+			</thead>
+			<tbody>
+                <% data2.forEach((item2) => { %>
+				<tr>
+					<td><%= item2.reg_date %></td>
+					<td><%= item2.contents %></td>
+                    <td><%= item2.event_type %></td>
+				</tr>
+                <% }); %>
+			</tbody>
+		</table>
+
+    </div>
+  </body>
+</html>
